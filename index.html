@@ -205,8 +205,7 @@
     .loc-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px; align-items: start; }
     .map-wrap {
       background: var(--blue-bg); border-radius: 18px; overflow: hidden;
-      height: 380px; border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
+      height: 380px; border: none;
     }
     .map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
     .map-hint { display: flex; flex-direction: column; align-items: center; gap: 10px; }
@@ -895,19 +894,7 @@
     </div>
     <div class="loc-inner">
       <div class="map-wrap fade-up">
-        <!-- O mapa aparecerá aqui quando o site estiver publicado online -->
-        <a href="https://maps.google.com/?q=R.+Buenos+Aires,+466,+Batel,+Curitiba,+PR" target="_blank" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;width:100%;height:100%;text-decoration:none;background:var(--blue-bg);">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1a6080" stroke-width="1.2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <div style="text-align:center;">
-            <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#0d3347;margin-bottom:6px;">R. Buenos Aires, 466</div>
-            <div style="font-size:13px;color:#567080;margin-bottom:14px;">Batel, Piso L — Curitiba / PR</div>
-            <div style="display:inline-flex;align-items:center;gap:7px;background:#0d3347;color:#fff;font-size:12px;font-weight:500;padding:9px 18px;border-radius:20px;font-family:'DM Sans',sans-serif;">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Abrir no Google Maps
-            </div>
-          </div>
-          <div style="font-size:10px;color:#c4a96a;font-family:'DM Sans',sans-serif;letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;">O mapa interativo aparece quando o site for publicado</div>
-        </a>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.8974463665804!2d-49.28185228824312!3d-25.44169193326235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce4773436bef9%3A0x6b6c13c36a8511ef!2sR.%20Buenos%20Aires%2C%20466%20-%20Batel%2C%20Curitiba%20-%20PR%2C%2080250-070!5e0!3m2!1spt-BR!2sbr!4v1778267327364!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="loc-cards fade-up" style="transition-delay:.15s">
         <div class="loc-block">
