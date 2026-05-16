@@ -7,8 +7,69 @@
   <title>Dra. Cristiana Cardoso — Odontologia</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
   <style>
+    /* ── FORÇAR MODO CLARO EM TODOS OS DISPOSITIVOS ── */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: light only !important;
+      }
+      html, body {
+        background: #f5ede0 !important;
+        color: #0d1f2d !important;
+      }
+      nav {
+        background: rgba(245,237,224,0.98) !important;
+        border-bottom-color: #e8dece !important;
+      }
+      .nav-logo { color: #0d3347 !important; }
+      .nav-links a { color: #567080 !important; }
+      .hero { background: #f5ede0 !important; }
+      .hero-right { background: #e8f2f7 !important; }
+      .hero h1 { color: #0d3347 !important; }
+      .hero-desc { color: #567080 !important; }
+      .hero-eyebrow { color: #1a6080 !important; }
+      .stat-num { color: #0d3347 !important; -webkit-text-fill-color: initial !important; }
+      .stat-lbl { color: #567080 !important; }
+      .trust-band { background: #0d3347 !important; }
+      .services { background: #f5ede0 !important; }
+      .sec-head h2 { color: #0d3347 !important; }
+      .sec-head p { color: #567080 !important; }
+      .svc-card { background: #ffffff !important; border-color: #d0e4ee !important; }
+      .svc-card h3 { color: #0d3347 !important; }
+      .svc-card p { color: #567080 !important; }
+      .svc-icon { background: #e8f2f7 !important; }
+      .gallery { background: #e8f2f7 !important; }
+      .g-item { background: #f0f7fa !important; border-color: #d0e4ee !important; }
+      .g-item span { color: #567080 !important; }
+      .about { background: #f5ede0 !important; }
+      .about-frame { background: #e8f2f7 !important; }
+      .about-text h2 { color: #0d3347 !important; }
+      .about-text p { color: #567080 !important; }
+      .pill { background: #e8f2f7 !important; color: #0d3347 !important; border-color: #d0e4ee !important; }
+      .location { background: #e8f2f7 !important; }
+      .loc-block { background: #ffffff !important; border-color: #d0e4ee !important; }
+      .loc-icon { background: #e8f2f7 !important; }
+      .loc-lbl { color: #567080 !important; }
+      .loc-val { color: #0d1f2d !important; }
+      .map-wrap { background: #f0f7fa !important; border-color: #d0e4ee !important; }
+      .hero-badge { background: #ffffff !important; border-color: #d0e4ee !important; }
+      .badge-lbl { color: #567080 !important; }
+      .badge-val { color: #0d3347 !important; }
+      .badge-icon { background: #f5f0e8 !important; }
+      .horario-grid .h-row { background: #e8f2f7 !important; }
+      .h-dia { color: #0d3347 !important; }
+      .h-time { color: #1a6080 !important; }
+      .h-sab { background: #f5f0e8 !important; }
+      .h-fechado { background: #f5f5f5 !important; }
+      .h-fechado .h-dia { color: #999 !important; }
+      .h-fechado .h-time { color: #bbb !important; }
+      footer { background: #071520 !important; }
+      .about-badge { background: #c4a96a !important; }
+      .mob-menu { background: #f5ede0 !important; }
+      .mob-menu a { color: #0d1f2d !important; }
+    }
+
     :root {
-      color-scheme: light;
+      color-scheme: light only;
       --navy:      #0d3347;
       --blue:      #1a6080;
       --blue-mid:  #2a7898;
