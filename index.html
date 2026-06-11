@@ -45,6 +45,10 @@
       .about-text h2 { color: #0d3347 !important; }
       .about-text p { color: #567080 !important; }
       .pill { background: #e8f2f7 !important; color: #0d3347 !important; border-color: #d0e4ee !important; }
+      .reviews { background: #faf7f2 !important; }
+      .review-card { background: #ffffff !important; border-color: #d0e4ee !important; }
+      .review-name, .reviews-score strong { color: #0d3347 !important; }
+      .review-text, .reviews-score span { color: #567080 !important; }
       .location { background: #e8f2f7 !important; }
       .loc-block { background: #ffffff !important; border-color: #d0e4ee !important; }
       .loc-icon { background: #e8f2f7 !important; }
@@ -302,6 +306,33 @@
     .about-text p { font-size: 14px; color: var(--muted); line-height: 1.85; margin-bottom: 14px; }
     .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
     .pill { background: var(--blue-lt); color: var(--navy); font-size: 12px; font-weight: 500; padding: 6px 16px; border-radius: 20px; border: 0.5px solid var(--border); }
+
+    /* AVALIACOES */
+    .reviews { padding: 100px 0; background: var(--cream); }
+    .reviews-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; margin-bottom: 36px; }
+    .reviews-top .sec-head { text-align: left; margin-bottom: 0; }
+    .reviews-top .sec-head p { margin: 0; }
+    .reviews-score { display: flex; align-items: center; gap: 14px; background: var(--white); border: 0.5px solid rgba(196,169,106,0.4); border-radius: 14px; padding: 14px 18px; flex-shrink: 0; box-shadow: 0 8px 28px rgba(13,51,71,0.08); }
+    .reviews-score svg { color: var(--gold); flex-shrink: 0; }
+    .reviews-score strong { display: block; font-family: 'Cormorant Garamond', serif; font-size: 30px; line-height: 1; color: var(--navy); font-weight: 400; }
+    .reviews-score span { display: block; font-size: 11px; color: var(--muted); margin-top: 3px; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .review-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 16px; padding: 24px 22px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 10px 36px rgba(13,51,71,0.06); }
+    .review-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .review-person { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .review-avatar { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--blue-lt); color: var(--navy); font-size: 13px; font-weight: 500; flex-shrink: 0; }
+    .review-name { font-size: 14px; font-weight: 500; color: var(--navy); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .review-source { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .review-stars { color: var(--gold); font-size: 13px; white-space: nowrap; }
+    .review-text { color: var(--muted); font-size: 13px; line-height: 1.75; margin: 0; }
+    .review-extra { display: none; }
+    .review-card.expanded .review-extra { display: inline; }
+    .review-toggle { align-self: flex-start; border: 0; background: transparent; color: var(--blue); cursor: pointer; font-family: inherit; font-size: 12px; font-weight: 500; padding: 0; margin-top: -6px; }
+    .review-toggle:hover { color: var(--navy); }
+    .reviews-action { display: flex; justify-content: center; margin-top: 34px; }
+    .btn-review { display: inline-flex; align-items: center; gap: 9px; color: var(--navy); background: var(--white); border: 0.5px solid rgba(196,169,106,0.55); border-radius: 30px; padding: 13px 24px; font-size: 13px; font-weight: 500; text-decoration: none; box-shadow: 0 8px 28px rgba(196,169,106,0.16); transition: transform 0.15s, box-shadow 0.2s, border-color 0.2s; }
+    .btn-review:hover { transform: translateY(-2px); border-color: var(--gold); box-shadow: 0 12px 36px rgba(196,169,106,0.24); }
+    .btn-review svg { color: var(--gold); }
 
     /* LOCALIZAÇÃO */
     .location { padding: 100px 0; background: var(--blue-lt); }
@@ -691,6 +722,12 @@
       .about-text > p:first-of-type { text-align: left; }
       .pills { justify-content: center; }
 
+      /* Avaliacoes */
+      .reviews-top { align-items: center; flex-direction: column; text-align: center; }
+      .reviews-top .sec-head { text-align: center; }
+      .reviews-top .sec-head p { margin: 0 auto; }
+      .reviews-grid { grid-template-columns: 1fr 1fr; }
+
       /* Localização */
       .loc-inner { grid-template-columns: 1fr; }
       .map-wrap { height: 280px; }
@@ -709,7 +746,7 @@
       .container { padding: 0 18px; }
 
       /* Seções */
-      .services, .gallery, .about, .location, .cta-sec { padding: 72px 0; }
+      .services, .gallery, .about, .reviews, .location, .cta-sec { padding: 72px 0; }
       .sec-head { margin-bottom: 36px; }
       .sec-head h2 { font-size: 32px; }
       .sec-head p { font-size: 14px; }
@@ -750,6 +787,14 @@
       .about-img-wrap { max-width: 280px; }
       .about-text h2 { font-size: 36px; }
       .about-text p { font-size: 13px; }
+
+      /* Avaliacoes */
+      .reviews-top { margin-bottom: 28px; gap: 18px; }
+      .reviews-score { width: 100%; justify-content: center; }
+      .reviews-grid { grid-template-columns: 1fr; gap: 12px; }
+      .review-card { padding: 20px 18px; }
+      .review-text { font-size: 13px; }
+      .btn-review { width: 100%; justify-content: center; }
 
       /* Localização */
       .map-wrap { height: 240px; border-radius: 12px; }
@@ -1128,6 +1173,230 @@
   </div>
 </section>
 
+<!-- AVALIAÇÕES -->
+<section class="reviews" id="avaliacoes">
+  <div class="container">
+    <div class="reviews-top fade-up">
+      <div class="sec-head">
+        <span class="tag">Avaliações</span>
+        <h2>O que os pacientes dizem</h2>
+        <p>Avaliações reais compartilhadas no Google</p>
+      </div>
+      <div class="reviews-score" aria-label="Avaliação média no Google">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.94 5.96 6.58.96-4.76 4.64 1.12 6.55L12 17.02l-5.88 3.09 1.12-6.55-4.76-4.64 6.58-.96L12 2z"/></svg>
+        <div><strong>5.0</strong><span>Avaliações no Google</span></div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <article class="review-card fade-up">
+        <div class="review-head">
+          <div class="review-person">
+            <div class="review-avatar">IM</div>
+            <div>
+              <div class="review-name">Isabel M Mello</div>
+              <div class="review-source">Google · há 6 dias</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+        </div>
+        <p class="review-text">Dra. Cristiana é uma benção! Atendeu minha mãe de 72 anos, com muita dedicação e atenção. Nos ajudou muito com as instruções e o trabalho. Deus abençoe, dra!</p>
+      </article>
+
+      <article class="review-card fade-up" style="transition-delay:.04s">
+        <div class="review-head">
+          <div class="review-person">
+            <div class="review-avatar">AW</div>
+            <div>
+              <div class="review-name">Alda Wolski</div>
+              <div class="review-source">Google · há 7 dias</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+        </div>
+        <p class="review-text">A Dra. Cristiana é uma excelente profissional, e super dedicada no que faz. Amo ❤️ ser paciente dela. Sempre vai ser minha Dra favorita... Beijos no seu coração ❤️</p>
+      </article>
+
+      <article class="review-card fade-up" style="transition-delay:.08s">
+        <div class="review-head">
+          <div class="review-person">
+            <div class="review-avatar">EA</div>
+            <div>
+              <div class="review-name">Eliarvani Arvani</div>
+              <div class="review-source">Local Guide · há 1 semana</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+        </div>
+        <p class="review-text">A Doutora Cristiana é uma excelente profissional! Muito dedicada e comprometida com o bem-estar de seus pacientes. Desde o primeiro atendimento, demonstra atenção, carinho e acolhimento.<span class="review-extra"> Fazendo com que nos sintamos seguros e confortáveis em seu consultório. Além de sua competência, realiza um trabalho impecável, com resultados que superam as expectativas. Estou muito feliz com o resultado do meu tratamento; meus dentes ficaram maravilhosos, voltei a sorrir com confiança. Recomendo de olhos fechados para quem procura uma dentista atenciosa, humana, cuidadosa e competente.</span></p>
+        <button class="review-toggle" type="button" aria-expanded="false">Ver mais</button>
+      </article>
+
+      <article class="review-card fade-up">
+        <div class="review-head">
+          <div class="review-person">
+            <div class="review-avatar">BL</div>
+            <div>
+              <div class="review-name">Bruno Leozin</div>
+              <div class="review-source">Google · há 1 semana</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+        </div>
+        <p class="review-text">Ótimo atendimento, muito atenciosa no pós atendimento também, profissional excelente, consultório em ótima localização também 😁</p>
+      </article>
+
+      <article class="review-card fade-up" style="transition-delay:.04s">
+        <div class="review-head">
+          <div class="review-person">
+            <div class="review-avatar">IC</div>
+            <div>
+              <div class="review-name">Ismael Cardoso</div>
+              <div class="review-source">Google · há 1 semana</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+        </div>
+        <p class="review-text">Só tenho a agradecer à Dra. Cristiana. Durante anos sofri com problemas dentários que afetavam tanto minha saúde quanto minha autoestima.<span class="review-extra"> Após realizar meu implante com ela, recuperei minha qualidade de vida e voltei a sorrir com confiança. O resultado foi excelente, e em breve farei novos implantes. Recomendo seu trabalho pela competência, atenção e profissionalismo. Uma excelente profissional!</span></p>
+        <button class="review-toggle" type="button" aria-expanded="false">Ver mais</button>
+      </article>
+
+      <article class="review-card fade-up" style="transition-delay:.08s">
+        <div class="review-head">
+          <div class="review-person">
+            <div class="review-avatar">SC</div>
+            <div>
+              <div class="review-name">Sonia Regina Calaca</div>
+              <div class="review-source">Google · há 1 semana</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+        </div>
+        <p class="review-text">Dra. maravilhosa, atenciosa!!</p>
+      </article>
+
+      <article class="review-card fade-up">
+        <div class="review-head">
+          <div class="review-person">
+            <div class="review-avatar">AO</div>
+            <div>
+              <div class="review-name">Aline Ozelin</div>
+              <div class="review-source">Google · há 1 semana</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+        </div>
+        <p class="review-text">Dra Cris é maravilhosa, atendimento impecável, sempre com muito cuidado e atenção recomendo pra todos ❤️🫰</p>
+      </article>
+
+      <article class="review-card fade-up" style="transition-delay:.04s">
+        <div class="review-head">
+          <div class="review-person">
+            <div class="review-avatar">HF</div>
+            <div>
+              <div class="review-name">Hosana Fagundes</div>
+              <div class="review-source">Google · há 1 semana</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+        </div>
+        <p class="review-text">Avaliou com 5 estrelas no Google.</p>
+      </article>
+
+      <article class="review-card fade-up" style="transition-delay:.08s">
+        <div class="review-head">
+          <div class="review-person">
+            <div class="review-avatar">ZR</div>
+            <div>
+              <div class="review-name">Zenilda Ribeiro</div>
+              <div class="review-source">Google · há 1 semana</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+        </div>
+        <p class="review-text">Avaliou com 5 estrelas no Google.</p>
+      </article>
+
+      <article class="review-card fade-up">
+        <div class="review-head">
+          <div class="review-person">
+            <div class="review-avatar">EA</div>
+            <div>
+              <div class="review-name">Essaira Almeida</div>
+              <div class="review-source">Local Guide · há 1 semana</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+        </div>
+        <p class="review-text">Avaliou com 5 estrelas no Google.</p>
+      </article>
+
+      <article class="review-card fade-up" style="transition-delay:.04s">
+        <div class="review-head">
+          <div class="review-person">
+            <div class="review-avatar">FB</div>
+            <div>
+              <div class="review-name">Francelyne Biavatti</div>
+              <div class="review-source">Google · há 1 semana</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+        </div>
+        <p class="review-text">Perfeita!</p>
+      </article>
+
+      <article class="review-card fade-up" style="transition-delay:.08s">
+        <div class="review-head">
+          <div class="review-person">
+            <div class="review-avatar">MD</div>
+            <div>
+              <div class="review-name">Michelle Demiciano</div>
+              <div class="review-source">Google · há 1 semana</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+        </div>
+        <p class="review-text">O que eu vou dizer da Dra. Cristiana, uma super profissional, explica todos os procedimentos com clareza, cada detalhe do que vai ser feito durante o tratamento.<span class="review-extra"> Me sinto super segura em deixar ela cuidar do meu sorriso. Super indico esta profissional 😍.</span></p>
+        <button class="review-toggle" type="button" aria-expanded="false">Ver mais</button>
+      </article>
+
+      <article class="review-card fade-up">
+        <div class="review-head">
+          <div class="review-person">
+            <div class="review-avatar">EC</div>
+            <div>
+              <div class="review-name">Estefani Cardoso</div>
+              <div class="review-source">Google · há 1 semana</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+        </div>
+        <p class="review-text">Excelente profissional, com atendimento de alta qualidade. Muito prestativa, atenciosa e dedicada, sempre demonstrando cuidado e excelência no que faz.</p>
+      </article>
+
+      <article class="review-card fade-up" style="transition-delay:.04s">
+        <div class="review-head">
+          <div class="review-person">
+            <div class="review-avatar">IH</div>
+            <div>
+              <div class="review-name">Isabelly Hanzen</div>
+              <div class="review-source">Google · há 1 semana</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+        </div>
+        <p class="review-text">Hoje eu queria agradecer de coração à Dra. Cristiana pelo trabalho incrível que fez no meu sorriso. 🩷 Antes das facetas, eu tinha muita insegurança com os meus dentes.<span class="review-extra"> Eles não eram proporcionais e o afastamento entre eles fazia com que eu evitasse sorrir, principalmente em fotos. Depois das facetas, minha autoestima mudou completamente. Hoje eu me sinto muito mais confiante, feliz e à vontade para sorrir sem medo. Sou muito grata por todo o cuidado, dedicação e carinho em cada detalhe. Obrigada por transformar não só o meu sorriso, mas também a forma como eu me vejo. ✨</span></p>
+        <button class="review-toggle" type="button" aria-expanded="false">Ver mais</button>
+      </article>
+    </div>
+    <div class="reviews-action fade-up">
+      <a class="btn-review" href="https://g.page/r/CUE6GJ76i82DEBM/review" target="_blank" rel="noopener noreferrer">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.94 5.96 6.58.96-4.76 4.64 1.12 6.55L12 17.02l-5.88 3.09 1.12-6.55-4.76-4.64 6.58-.96L12 2z"/></svg>
+        Deixar avaliação no Google
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- CTA FINAL -->
 <section class="cta-sec">
   <div class="container">
@@ -1165,6 +1434,15 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  document.querySelectorAll('.review-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.review-card');
+      const expanded = card.classList.toggle('expanded');
+      btn.textContent = expanded ? 'Ver menos' : 'Ver mais';
+      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+  });
 
   function toggleMenu() {
     document.getElementById('mobMenu').classList.toggle('open');
