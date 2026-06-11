@@ -66,6 +66,7 @@
       .h-fechado .h-time { color: #bbb !important; }
       footer { background: #071520 !important; }
       .about-badge { background: #c4a96a !important; }
+      .nav-review { background: #ffffff !important; color: #c4a96a !important; border-color: #e8dece !important; }
       .mob-menu { background: #f5ede0 !important; }
       .mob-menu a { color: #0d1f2d !important; }
     }
@@ -143,6 +144,23 @@
       flex-shrink: 0;
     }
     .nav-ig:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(129,52,175,0.35); }
+    .nav-review {
+      width: 38px; height: 38px;
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 50%;
+      color: var(--gold);
+      text-decoration: none;
+      background: var(--white);
+      border: 0.5px solid var(--sand-dark);
+      box-shadow: 0 4px 16px rgba(196,169,106,0.24);
+      transition: transform 0.15s, box-shadow 0.2s, border-color 0.2s;
+      flex-shrink: 0;
+    }
+    .nav-review:hover {
+      transform: translateY(-1px);
+      border-color: rgba(196,169,106,0.75);
+      box-shadow: 0 8px 20px rgba(196,169,106,0.32);
+    }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
     .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--navy); border-radius: 2px; }
 
@@ -771,8 +789,8 @@
       .container { padding: 0 14px; }
       nav { padding: 0 16px; height: 60px; }
       .nav-logo { font-size: 15px; }
-      .nav-actions { margin-right: 8px; }
-      .nav-ig { width: 34px; height: 34px; }
+      .nav-actions { margin-right: 8px; gap: 8px; }
+      .nav-ig, .nav-review { width: 34px; height: 34px; }
       .nav-cta { display: none; } /* esconde botão nav em telas muito pequenas */
 
       .hero-left { padding: 40px 14px 24px; }
@@ -836,6 +854,11 @@
         <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.8"></rect>
         <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle>
         <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"></circle>
+      </svg>
+    </a>
+    <a class="nav-review" href="https://g.page/r/CUE6GJ76i82DEBM/review" target="_blank" rel="noopener noreferrer" aria-label="Avaliar a Dra. Cristiana no Google" title="Avaliar no Google">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 2l2.94 5.96 6.58.96-4.76 4.64 1.12 6.55L12 17.02l-5.88 3.09 1.12-6.55-4.76-4.64 6.58-.96L12 2z"/>
       </svg>
     </a>
   </div>
